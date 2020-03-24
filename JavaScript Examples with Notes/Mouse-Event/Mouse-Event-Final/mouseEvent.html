@@ -32,6 +32,8 @@
 
                             <button class="btn btn-primary" onclick="alertTime()">What is the Time?</button>
 
+                            <!-- The onclick event occurs when the user clicks on an element. 
+                            It is used with almost all HTML elements except few elements such as <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title> -->
                             <button id="text" class="btn btn-success" onclick="changeText()">Click Me!</button>
 
                         </div>
@@ -42,6 +44,9 @@
                             ondblclick Event
                         </div>
                         <div class="card-body">
+
+                            <!-- The ondblclick event occurs when the user double-clicks on an element. 
+                            It is used with almost all HTML elements except few elements such as <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title> -->
                             <button class="btn btn-primary" ondblclick="alertTime()">What is the Time?</button>
 
                             <button id="dblclicktext" class="btn btn-success"
@@ -57,6 +62,12 @@
                             onmousedown Event & onmouseup Event
                         </div>
                         <div class="card-body">
+
+                            <!-- The onmousedown event occurs when a user presses a mouse button over an element. 
+                            It is used with almost all HTML elements except few elements such as <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title> -->
+
+                            <!-- The onmouseup event occurs when a user releases a mouse button over an element. 
+                            It is used with almost all HTML elements except few elements such as <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title> -->
                             <button id="textone" class="btn btn-primary" onmousedown="mouseDown()"
                                 onmouseup="mouseUp()">Click Me!</button>
 
@@ -71,6 +82,12 @@
                             onmouseover Event & onmouseout Event
                         </div>
                         <div class="card-body">
+
+                            <!-- The onmouseover event occurs when the mouse pointer is moved onto an element, or onto one of its children.  
+                            It is used with almost all HTML elements except few elements such as <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title> -->
+
+                            <!-- The onmouseout event occurs when the mouse pointer is moved out of an element, or out of one of its children. 
+                            It is used with almost all HTML elements except few elements such as <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title> -->
                             <button id="textthree" class="btn btn-dark" onmouseover="mouseOverChangeColor()"
                                 onmouseout="mouseOutChangeColor()">Mouse Over
                                 Me!</button>
@@ -87,6 +104,10 @@
                             onmousemove Event
                         </div>
                         <div class="card-body">
+
+                            <!-- The onmousemove event occurs when the pointer is moving while it is over an element. 
+                            It is used with almost all HTML elements except few elements such as <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title>
+                            -->
                             <div class="mousemove" onmousemove="mouseMove()">
                                 <p>onmousemove counter: <span id="counter"></span></p>
                             </div>
@@ -98,6 +119,9 @@
                             onwheel Event
                         </div>
                         <div class="card-body">
+
+                            <!-- The onmousewheel event occurs when the mouse wheel is rolled up or down over an element. 
+                            It is used with all HTML elements -->
                             <div id="mydiv" onmousewheel="mouseWheel()">This example demonstrates "onWheel" event. Roll
                                 the
                                 mouse wheel over me - either up or down!
@@ -110,6 +134,7 @@
         </div>
     </div>
 
+    <!-- The HTML <script> element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code. -->
     <script src="mouseEvent.js"></script>
 </body>
 

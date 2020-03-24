@@ -19,22 +19,31 @@
                         <form>
                             <div class="form-group">
                                 <label>Text Field 1:</label>
-                                <input type="text" class="form-control" id="textone">
+
+                                <!-- The onkeydown event occurs when the user is pressing a key (on the keyboard).
+
+                                It supports almost all HTML elements except <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title> -->
+                                <input type="text" class="form-control" id="textone" onkeydown="keyDownAlert()">
                             </div>
 
                             <div class="form-group">
                                 <label>Text Field 2:</label>
-                                <input type="text" class="form-control" id="texttwo">
+                                <input type="text" class="form-control" id="texttwo" onkeydown="setBackgroundColor()">
                             </div>
 
                             <div class="form-group">
                                 <label>Enter Your Name:</label>
-                                <input type="text" class="form-control" id="name">
+
+                                <!-- The onkeyup event occurs when the user releases a key (on the keyboard).
+                                
+                                It supports almost all HTML elements except <br>, <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title>-->
+                                <input type="text" class="form-control" id="name" onkeyup="keyUpCase()">
                             </div>
 
                             <div class="form-group">
                                 <label>Text Field 3:</label>
-                                <input type="text" class="form-control" id="textthree">
+                                <input type="text" class="form-control" id="textthree" onkeydown="keyDownBgColor()"
+                                    onkeyup="keyUpBgColor()">
                             </div>
                         </form>
                     </div>
@@ -43,6 +52,8 @@
         </div>
     </div>
 
+    <!-- The HTML <script> element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code. -->
+    <script src="keyboardEvent.js"></script>
 </body>
 
 </html>

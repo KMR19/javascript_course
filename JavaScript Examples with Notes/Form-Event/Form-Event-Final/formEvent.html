@@ -24,9 +24,16 @@
 
                             <div class="form-group">
                                 <Label>First Name:</Label>
+
+                                <!-- The onfocus event occurs when an element gets focus. The onfocus event is most often used with <input>, <select>, and <a> element. 
+                                    
+                                It is used with almost all HTML elements except few elements such as <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title>. -->
                                 <input type="text" id="firstname" class="form-control" onfocus="focusFunction()">
                             </div>
 
+                            <!-- The onblur event occurs when an object loses focus. The onblur event is most often used with form validation code (e.g. when the user leaves a form field). 
+                                
+                            It is used with almost all HTML elements except few elements such as <head>, <html>, <iframe>, <meta>, <param>, <script>, <style>, and <title> -->
                             <div class="form-group">
                                 <Label>Last Name:</Label>
                                 <input type="text" id="lastname" class="form-control" onblur="blurFunction()">
@@ -38,6 +45,9 @@
                                     onblur="blurSetColor()"> </textarea>
                             </div>
 
+                            <!-- The onchange event occurs when the value of an element has been changed. For radiobuttons and checkboxes, the onchange event occurs when the checked state has been changed. 
+                                
+                            The onchange event is used with <input>, <select> and <textarea> element-->
                             <div class="form-group">
                                 <label>Select Country:</label>
                                 <select id="country" class="form-control" onchange="changeFunction()">

@@ -19,22 +19,23 @@
                         <form>
                             <div class="form-group">
                                 <label>Text Field 1:</label>
-                                <input type="text" class="form-control" id="textone">
+                                <input type="text" class="form-control" id="textone" onkeydown="keyDownAlert()">
                             </div>
 
                             <div class="form-group">
                                 <label>Text Field 2:</label>
-                                <input type="text" class="form-control" id="texttwo">
+                                <input type="text" class="form-control" id="texttwo" onkeydown="setBackgroundColor()">
                             </div>
 
                             <div class="form-group">
                                 <label>Enter Your Name:</label>
-                                <input type="text" class="form-control" id="name">
+                                <input type="text" class="form-control" id="name" onkeyup="keyUpCase()">
                             </div>
 
                             <div class="form-group">
                                 <label>Text Field 3:</label>
-                                <input type="text" class="form-control" id="textthree">
+                                <input type="text" class="form-control" id="textthree" onkeydown="keyDownBgColor()"
+                                    onkeyup="keyUpBgColor()">
                             </div>
                         </form>
                     </div>
@@ -43,6 +44,7 @@
         </div>
     </div>
 
+    <script src="keyboardEvent.js"></script>
 </body>
 
 </html>
