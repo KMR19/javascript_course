@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>JavaScript Window Object</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        JavaScript Window Object Methods Example
+                    </div>
+                    <div class="card-body">
+                        <input type="button" class="btn btn-primary" value="Open New Window"
+                            onclick="openNewWindow('windowObject.html')">
+
+                        <input type="button" class="btn btn-warning" value="Alert" onclick="displayAlert()">
+
+                        <input type="button" class="btn btn-success" value="Resize Window" onclick="resizeWindow()">
+
+                        <input type="button" class="btn btn-info" value="Move Window" onclick="moveWindow()">
+
+                        <input type="button" class="btn btn-danger" value="Close Window" onclick="closeWindow()">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        JavaScript Window Object Properties Example
+                    </div>
+                    <div class="card-body">
+
+                        <iframe src="https://nodejs.org/en/"></iframe>
+                        <iframe src="https://angular.io/"></iframe>
+                        <iframe src="https://vuejs.org/"></iframe>
+
+                        <button onclick="changeLocation()" class="btn btn-primary mt-3">Change Location of the iframe
+                            elements</button>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="windowObject.js"></script>
+</body>
+
+</html>

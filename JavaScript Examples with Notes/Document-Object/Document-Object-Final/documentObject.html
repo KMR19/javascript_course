@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Document Object</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<!-- The onclick attribute specifies some script to run when the element is clicked. The click event is raised when the user clicks on an element. -->
+
+<body onclick="displayActiveElement()">
+
+    <div class="container mt-5">
+        <div class="row">
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        Document Object Properties Example
+                    </div>
+                    <div class="card-body">
+
+                        <p>Click anywhere in the document to display the active element.</p>
+
+                        <input type="text" value="An input field">
+                        <button>A Button</button>
+
+                        <p id="para"></p>
+
+                        <hr>
+                        <b>The URL of this document is:</b>
+                        <p id="para1"></p>
+
+                        <b>Loading Status:</b>
+                        <p id="para2"></p>
+
+                        <b>The title of this document is:</b>
+                        <p id="para3"></p>
+
+                        <b>Domain name of this document is:</b>
+                        <p id="para4"></p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        Document Object Methods Example
+                    </div>
+                    <div class="card-body">
+                        <form>
+
+                            <div class="form-group">
+                                <label>First Name:</label>
+                                <input type="text" class="form-control" id="firstname">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Last Name:</label>
+                                <input type="text" class="form-control" name="lastname">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Description: </label>
+                                <textarea class="form-control"></textarea>
+                            </div>
+
+                            <!-- The onclick attribute specifies some script to run when the element is clicked. The click event is raised when the user clicks on an element. -->
+                            <input type="button" onclick="getElements()" class="btn btn-primary" value="Print Details">
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- The HTML <script> element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code. -->
+    <script src="documentObject.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>JavaScript Mouse Events</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        .mousemove {
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        #mydiv {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+
+                <div class="card-deck">
+                    <div class="card">
+                        <div class="card-header">
+                            onclick Event
+                        </div>
+                        <div class="card-body">
+
+                            <button class="btn btn-primary" onclick="alertTime()">What is the Time?</button>
+
+                            <button id="text" class="btn btn-success" onclick="changeText()">Click Me!</button>
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            ondblclick Event
+                        </div>
+                        <div class="card-body">
+                            <button class="btn btn-primary" ondblclick="alertTime()">What is the Time?</button>
+
+                            <button id="dblclicktext" class="btn btn-success"
+                                ondblclick="changeDblClickText()">Double-Click
+                                Me!</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-deck mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            onmousedown Event & onmouseup Event
+                        </div>
+                        <div class="card-body">
+                            <button id="textone" class="btn btn-primary" onmousedown="mouseDown()"
+                                onmouseup="mouseUp()">Click Me!</button>
+
+                            <button id="texttwo" class="btn btn-dark" onmousedown="mouseDownChangeColor()"
+                                onmouseup="mouseUpChangeColor()">Click the
+                                text!</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            onmouseover Event & onmouseout Event
+                        </div>
+                        <div class="card-body">
+                            <button id="textthree" class="btn btn-dark" onmouseover="mouseOverChangeColor()"
+                                onmouseout="mouseOutChangeColor()">Mouse Over
+                                Me!</button>
+
+                            <img id="image" src="https://picsum.photos/id/1/64" onmouseover="mouseOverBigImage()"
+                                onmouseout="mouseOutNormalImage()">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-deck mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            onmousemove Event
+                        </div>
+                        <div class="card-body">
+                            <div class="mousemove" onmousemove="mouseMove()">
+                                <p>onmousemove counter: <span id="counter"></span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            onwheel Event
+                        </div>
+                        <div class="card-body">
+                            <div id="mydiv" onmousewheel="mouseWheel()">This example demonstrates "onWheel" event. Roll
+                                the
+                                mouse wheel over me - either up or down!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="mouseEvent.js"></script>
+</body>
+
+</html>

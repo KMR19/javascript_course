@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>JavaScript Form Events</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header">
+                        JavaScript Form Events Example
+                    </div>
+                    <div class="card-body">
+
+                        <!-- The onsubmit event occurs when a form is submitted.The onsubmit event is used with <form> element -->
+
+                        <!-- The onreset event occurs when a form is reset. The onreset event is used with <form> element-->
+                        <form onsubmit="submitFunction()" onreset="resetFunction()">
+
+                            <div class="form-group">
+                                <Label>First Name:</Label>
+                                <input type="text" id="firstname" class="form-control" onfocus="focusFunction()">
+                            </div>
+
+                            <div class="form-group">
+                                <Label>Last Name:</Label>
+                                <input type="text" id="lastname" class="form-control" onblur="blurFunction()">
+                            </div>
+
+                            <div class="form-group">
+                                <Label>Address:</Label>
+                                <textarea id="address" class="form-control" onfocus="focusSetColor()"
+                                    onblur="blurSetColor()"> </textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Select Country:</label>
+                                <select id="country" class="form-control" onchange="changeFunction()">
+                                    <option value="India">India</option>
+                                    <option value="China">China</option>
+                                    <option value="France">France</option>
+                                    <option value="Spain">Spain</option>
+                                </select>
+                            </div>
+
+                            <input type="submit" class="btn btn-primary" value="Submit">
+
+                            <input type="reset" class="btn btn-danger">
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The HTML <script> element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code. -->
+    <script src="formEvent.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>JavaScript Document Object with Forms</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+
+            <div class="col-6">
+                <div class="card">
+                    <div class="card-header">
+                        JavaScript Document Object with Forms Example
+                    </div>
+                    <div class="card-body">
+                        <form>
+
+                            <div class="form-group">
+                                <label>Name:</label>
+                                <input type="text" class="form-control" name="name">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Address:</label>
+                                <textarea name="address" class="form-control"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Laptop Size:</label>
+                                <select name="size" class="form-control">
+                                    <option>small</option>
+                                    <option selected>medium</option>
+                                    <option>large</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Packaging:</label>
+
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" name="packaging" class="form-check-input">
+                                    <label class="form-check-label">Cardboard Box</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" name="packaging" class="form-check-input">
+                                    <label class="form-check-label">Styrofoam-insulated container</label>
+                                </div>
+
+                            </div>
+
+                            <!-- The onclick attribute specifies some script to run when the element is clicked. The click event is raised when the user clicks on an element. -->
+                            <input type="button" class="btn btn-primary" value="Place Order Now" onclick="order()">
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- The HTML <script> element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code. -->
+    <script src="documentObjectForms.js"></script>
+</body>
+
+</html>
