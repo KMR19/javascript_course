@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Form validation with JavaScript</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-3">
+        <div class="row justify-content-center">
+            <div class="col-7">
+                <div class="card">
+                    <div class="card-header text-center">
+                        Form validation with JavaScript Example
+                    </div>
+                    <div class="card-body">
+
+                        <form name="applicationForm">
+                            <div class="row">
+                                <div class="form-group col">
+                                    <label>Full Name:</label>
+                                    <input type="text" class="form-control" name="name">
+                                    <div class="error" id="nameError"></div>
+                                </div>
+
+                                <div class="form-group col">
+                                    <label>Email Address:</label>
+                                    <input type="text" class="form-control" name="email">
+                                    <div class="error" id="emailError"></div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col">
+                                    <label>Password:</label>
+                                    <input type="password" class="form-control" name="password">
+                                    <div class="error" id="passwordError"></div>
+                                </div>
+
+                                <div class="form-group col">
+                                    <label>Confirm Password:</label>
+                                    <input type="password" class="form-control" name="confirmpassword">
+                                    <div class="error" id="confirmpasswordError"></div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col">
+                                    <label>Mobile Number:</label>
+                                    <input type="text" class="form-control" name="mobile">
+                                    <div class="error" id="mobileError"></div>
+                                </div>
+
+                                <div class="form-group col">
+                                    <label>Country:</label>
+                                    <select name="country" class="form-control">
+                                        <option>Select</option>
+                                        <option>Australia</option>
+                                        <option>India</option>
+                                        <option>United States</option>
+                                        <option>United Kingdom</option>
+                                    </select>
+                                    <div class="error" id="countryError"></div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col">
+                                    <label>Gender:</label><br>
+                                    <div class=" form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" name="gender" value="male">
+                                        <label class="form-check-label">Male</label>
+
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-input" name="gender" value="female">
+                                        <label class="form-check-label">Female</label>
+                                    </div>
+                                    <div class="error" id="genderError"></div>
+                                </div>
+
+                                <div class="form-group col">
+                                    <label>Hobbies:</label><br>
+                                    <div class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" name="hobbies[]" value="sports">
+                                        <label class="form-check-label">Sports</<input>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" name="hobbies[]" value="movies">
+                                        <label class="form-check-label">Movies</<input>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="checkbox" class="form-check-input" name="hobbies[]" value="music">
+                                        <label class="form-check-label">Music</<input>
+                                    </div>
+                                    <div class="error" id="hobbiesError"></div>
+                                </div>
+                            </div>
+
+                            <input type="submit" value="Submit" class="btn btn-primary btn-block">
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

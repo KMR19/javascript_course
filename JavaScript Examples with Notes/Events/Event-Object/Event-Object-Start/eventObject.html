@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>JavaScript Event Object</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        .div {
+            border: 2px solid red;
+            padding: 20px;
+        }
+
+        .p {
+            border: 2px solid green;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        JavaScript Event Object Example
+                    </div>
+                    <div class="card-body">
+
+
+                        <input type="button" class="btn btn-primary mb-4" value="Click Me" id="btn">
+
+                        <div class="mb-4">
+                            <label>Text:</label>
+                            <input type="text" id="text">
+                        </div>
+
+                        <div class="div mb-4">
+                            This is div element
+                            <p class="p">This is p element</p>
+                        </div>
+
+                        <div class="div mb-2" id="myDiv">*</div>
+
+                        <button class="btn btn-primary">Simulate Mouse Over</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        Event Details
+                    </div>
+                    <div class="card-body">
+                        <p id="para1"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
