@@ -24,11 +24,12 @@ function goBackward() {
 
 // The go() method loads a specific URL from the history list.
 // The parameter can either be a number which goes to the URL within the specific position (-1 goes back one page, 1 goes forward one page, 2 goes forward two page, -2 goes back two page) or a string.
-// The string must be a partial or full URL, and the function will go to the first URL that matches the string.
+// The string parameter must be a partial or full URL, and the function will go to the first URL that matches the string.
 function goToLink() {
     history.go(1);
 }
 
+// The go() method with parameter 0 refresh or reloads current page
 function refresh() {
     history.go(0);
 }
