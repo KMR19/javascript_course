@@ -1,70 +1,73 @@
-// https://www.tutorialrepublic.com/javascript-tutorial/javascript-form-validation.php
-
 function printError(elemId, hintMsg) {
     document.getElementById(elemId).innerHTML = hintMsg;
 }
 
+
 function validateForm() {
 
     var name = document.applicationForm.name.value;
+    var email = document.applicationForm.email.value;
     var password = document.applicationForm.password.value;
     var confirmpassword = document.applicationForm.confirmpassword.value;
-    var email = document.applicationForm.email.value;
     var mobile = document.applicationForm.mobile.value;
     var country = document.applicationForm.country.value;
     var gender = document.applicationForm.gender.value;
+
     var hobbies = [];
     var checkboxes = document.getElementsByName("hobbies[]");
-    for (var i = 0; i < checkboxes.length; i++) {
+    for (i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].checked) {
             hobbies.push(checkboxes[i].value);
         }
     }
 
-    var nameError = passwordError = confirmPasswordError = emailError = mobileError = countryError = genderError = hobbiesError = true;
+    var nameError = passwordError = confirmpasswordError = emailError = mobileError = countryError = genderError = hobbiesError = true;
 
     if (name == "") {
         printError("nameError", "Please enter your name");
+    } else if (name.charAt(0) == " ") {
+        printError("nameError", "Name cannot start with leading space");
     } else {
-        var regex = /^[a-zA-Z\s]+$/;
-        if (regex.test(name) === false) {
-            printError("nameError", "Please enter a valid name");
-        } else {
-            printError("nameError", "");
-            nameError = false;
-        }
+        printError("nameError", "");
+        nameError = false;
+    }
+
+    atPos = email.indexOf("@");
+    dotPos = email.lastIndexOf(".");
+    if (email == "") {
+        printError("emailError", "Please enter your email address");
+    } else if (atPos < 1 || (dotPos < (atPos + 2)) || ((dotPos + 2) >= email.length)) {
+        printError("emailError", "Please enter a valid email address");
+    } else {
+        printError("emailError", "");
+        emailError = false;
     }
 
     if (password == "") {
         printError("passwordError", "Please enter your password");
+    } else if (password.length < 6) {
+        printError("passwordError", "Password must be atleast 6 characters long");
+    } else {
+        printError("passwordError", "");
+        passwordError = false;
     }
 
     if (confirmpassword == "") {
-        printError("confirmPasswordError", "Please enter confirm password");
-    }
-
-    if (email == "") {
-        printError("emailError", "Please enter your email address");
+        printError("confirmpasswordError", "Please enter your confirm password");
+    } else if (password != confirmpassword) {
+        printError("confirmpasswordError", "password must be same!");
     } else {
-        var regex = /^\S+@\S+\.\S+$/;
-        if (regex.test(email) === false) {
-            printError("emailError", "Please enter a valid email address");
-        } else {
-            printError("emailError", "");
-            emailError = false;
-        }
+        printError("confirmpasswordError", "");
+        confirmpasswordError = false;
     }
 
     if (mobile == "") {
         printError("mobileError", "Please enter your mobile number");
+    } else if (isNaN(mobile) || mobile.length != 10) {
+        printError("mobileError", "Please enter a valid 10 digit mobile number");
     } else {
-        var regex = /^[1-9]\d{9}$/;
-        if (regex.test(mobile) === false) {
-            printError("mobileError", "Please enter a valid 10 digit mobile number");
-        } else {
-            printError("mobileError", "");
-            mobileError = false;
-        }
+        printError("mobileError", "");
+        mobileError = false;
     }
 
     if (country == "Select") {
@@ -88,13 +91,14 @@ function validateForm() {
         hobbiesError = false;
     }
 
-    if ((nameError || passwordError || confirmPasswordError || emailError || mobileError || countryError || genderError || hobbiesError) == true) {
+
+    if ((nameError || passwordError || confirmpasswordError || emailError || mobileError || countryError || genderError || hobbiesError) == true) {
         return false;
     } else {
 
-        var dataPreview = "You've entered the following details: \n" +
+        var dataPreview = "You have entered the following details: \n" +
             "Full Name: " + name + "\n" +
-            "Email Address: " + email + "\n" +
+            "Email Addresss: " + email + "\n" +
             "Mobile Number: " + mobile + "\n" +
             "Country: " + country + "\n" +
             "Gender: " + gender + "\n";
@@ -103,5 +107,7 @@ function validateForm() {
         }
 
         alert(dataPreview);
+
     }
-};
+
+}
