@@ -28,12 +28,14 @@
                     </div>
                     <div class="card-body">
 
-
+                        <!-- The onclick event occurs when the user clicks on an element. -->
                         <input type="button" class="btn btn-primary mb-4" value="Click Me" id="btn"
                             onclick="getEventDetails(event)">
 
                         <div class="mb-4">
                             <label>Text:</label>
+
+                            <!-- The onkeypress event occurs when the user presses a key on the keyboard. -->
                             <input type="text" id="text" onkeypress="getEventDetails(event)">
                         </div>
 
@@ -42,8 +44,10 @@
                             <p class="p" onclick="getEventDetails(event)">This is p element</p>
                         </div>
 
+                        <!-- The onmouseover event occurs when the mouse pointer is moved onto an element, or onto one of its children. -->
                         <div class="div mb-2" id="myDiv" onmouseover="this.innerHTML += '*';">*</div>
 
+                        <!-- The onclick event occurs when the user clicks on an element and simulates the mouseover event. -->
                         <button class="btn btn-primary" onclick="simulateMouseOver(event)">Simulate Mouse Over</button>
 
                     </div>
